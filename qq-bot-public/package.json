@@ -1,0 +1,17 @@
+{
+  "name": "qq-bot",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "QQ message watcher + auto-reply, driven by window capture and WinRT OCR (no injection).",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node src/bot.js",
+    "watch": "node src/bot.js --watch",
+    "once": "node src/bot.js --once",
+    "doctor": "node src/doctor.js",
+    "ocr": "powershell -NoProfile -ExecutionPolicy Bypass -File tools/capture-window.ps1 -OutImage .probe-shot.png"
+  }
+}
